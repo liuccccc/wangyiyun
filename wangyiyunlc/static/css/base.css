@@ -1,0 +1,40 @@
+ul,a,p{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style:none;
+}
+a.z-slt{
+    color:#b21f2d;
+    text-decoration: none;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+ul li a{
+    text-decoration: none;
+}
+a.a_color{
+    color: #fff;
+}
+a.a_first{
+    font-size:25px;
+}
+h2{
+    font-weight: bold;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+input,button{
+    border:none;
+    outline:none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}

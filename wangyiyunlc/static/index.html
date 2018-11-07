@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/background.css"/>
+    <link rel="stylesheet" href="css/banner.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/login_modal.css"/>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/playbar.css">
+    <script src="js/banner1.js"></script>
+    <script src="js/ishidden.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/playbar.js"></script>
+    <script src="js/lunbo.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <title>网易音乐云</title>
+</head>
+<body>
+<header>
+    <!--黑色背景导航条-->
+    <div class="header_bag m-0" id="header_bag">
+        <div class="header d-flex" id="header">
+            <div class="pl-5 d-flex a_none">
+                <div class="my_img">
+                    <img src="img/topbar.png" alt=""/>
+                </div>
+                <a href="#" class="a_color a_first login">网易云音乐</a>
+                <ul class="first_nav list-unstyled d-flex">
+                    <li class="active"><a href="#" class="z-slt">发现音乐</a></li>
+                    <li><a href="#" class="z-slt" >我的音乐</a></li>
+                    <li><a href="#" class="z-slt">朋友</a></li>
+                    <li><a href="product.html" class="z-slt">商城</a></li>
+                    <li><a href="#" class="z-slt">音乐人</a></li>
+                    <li><a href="#" class="z-slt">下载客户端</a></li>
+                </ul>
+                <!--搜索歌曲-->
+                <div class="search">
+                    <div>
+                        <input type="text" class="input_a border-0" placeholder="音乐/电台/用户"/>
+                    </div>
+                </div>
+                <!--视频投稿-->
+                <div class="videoUp">
+                    <div>
+                        <a href="#">视频投稿</a>
+                    </div>
+                </div>
+                <!--用户登录-->
+                <div class="div_login nologin">
+                    <a href="#" data-action="login">登录</a>
+                    <i class="arr"></i>
+                    <ul>
+                        <li>
+                            <i class="mb_icon"></i>
+                            <a href="#">手机号登录</a>
+                        </li>
+                        <li>
+                            <i class="wx_icon"></i>
+                            <a href="#">微信登录</a>
+                        </li>
+                        <li>
+                            <i class="qq_icon"></i>
+                            <a href="#">QQ登录</a>
+                        </li>
+                        <li>
+                            <i class="wb_icon"></i>
+                            <a href="#">微博账号登录</a>
+                        </li>
+                        <li>
+                            <i class="wy_icon"></i>
+                            <a href="#">网易邮箱账号登录</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="islogin"></div>
+            </div>
+        </div>
+        <div class="login_modal"></div>
+    </div>
+    <!--红色背景导航条-->
+    <div class="nav_bg">
+        <div class="nav">
+            <ul class="w">
+                <li><a class="d navActive" href="#">推荐</a></li>
+                <li><a class="d" href="#">排行榜</a></li>
+                <li><a class="d" href="#">歌单</a></li>
+                <li><a class="d" href="#">主播电台</a></li>
+                <li><a class="d" href="#">歌手</a></li>
+                <li><a class="d" href="#">新碟上架</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--轮播-->
+<div class="banner_bg">
+    <div id="banner" class="banner">
+        <div class="wrap">
+            <div class="ban" style="transform-origin: 50% 50% -881.188px; transform: rotateY(-136.659rad);">
+                <img src="img/banner1.png" style="padding: 0px;">
+                <img src="img/banner2.png" style="padding: 0px; transform-origin: 50% 50% -881.188px; transform: rotateY(0.785398rad);">
+                <img src="img/banner3.png" style="padding: 0px; transform-origin: 50% 50% -881.188px; transform: rotateY(1.5708rad);">
+                <img src="img/banner4.png" style="padding: 0px; transform-origin: 50% 50% -881.188px; transform: rotateY(2.35619rad);">
+                <img src="img/banner5.png" style="padding: 0px; transform-origin: 50% 50% -881.188px; transform: rotateY(3.14159rad);">
+                <img src="img/banner6.png" style="padding: 0px; transform-origin: 50% 50% -881.188px; transform: rotateY(3.92699rad);">
+                <img src="img/shopbanner3.png" style="height:336px;padding: 0px; transform-origin: 50% 50% -881.188px; transform: rotateY(4.71239rad);">
+                <img src="img/shopbanner4.png" style="height:336px;padding: 0px; transform-origin: 50% 50% -881.188px; transform: rotateY(5.49779rad);">
+            </div> 
+            <ul class="dots"><li data-index="0" class=""></li><li data-index="1" class=""></li><li data-index="2" class=""></li><li data-index="3" class=""></li><li data-index="4" class=""></li><li data-index="5" class=""></li><li data-index="6" class="active"></li><li data-index="7" class=""></li></ul>
+        </div>
+        <div class="shadow">
+            <img src="img/shadow_min.png" alt="">
+        </div>
+        <div class="btn">
+            <button class="prev"></button>
+            <button class="next"></button>
+        </div>
+    </div>
+</div>
+<!--图片下面的导航-->
+<div class="recommend_bg">
+    <div class="recommend">
+        <div class="cover-text">
+          <h2 class="title" id="d1">歌单推荐</h2>  
+        </div>
+        <div class="second_nav">
+            <ul class="list-unstyled d-flex justify-content-center">
+                <li><a href="#" class="text-muted">为你推荐</a></li>
+                <li><a href="#" class="text-muted">90年代</a></li>
+                <li><a href="#" class="text-muted">民谣</a></li>
+                <li><a href="#" class="text-muted">日韩</a></li>
+                <li><a href="#" class="text-muted">情歌</a></li>
+                <li><a href="#" class="text-muted">网络歌曲</a></li>
+            </ul>
+        </div>
+        <!--歌单推荐下面5张图-->
+        <div class="playlists" id="gedan">
+            <ul class="wrapper list-unstyled d-flex justify-content-center flex-wrap">
+                <li>
+                    <div class="play_btn"><i></i></div>
+                    <a href="#" class="img_a">
+                        <img src="img/304.jpg" alt=""/>
+                        <div class="text_cont">
+                            <p class="pl_intro">歌单介绍♫</p>
+                            <p class="pl_amo">
+                                播放量
+                                <span>156.1</span>
+                                万
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="play_btn"><i></i></div>
+                    <a href="#" class="img_a">
+                        <img src="img/303.jpg" alt=""/>
+                        <div class="text_cont">
+                            <p class="pl_intro">歌单介绍♫</p>
+                            <p class="pl_amo">
+                                播放量
+                                <span>156.1</span>
+                                万
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="play_btn"><i></i></div>
+                    <a href="#" class="img_a">
+                        <img src="img/302.jpg" alt=""/>
+                        <div class="text_cont">
+                            <p class="pl_intro">歌单介绍♫</p>
+                            <p class="pl_amo">
+                                播放量
+                                <span>156.1</span>
+                                万
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="play_btn"><i></i></div>
+                    <a href="#" class="img_a">
+                        <img src="img/301.jpg" alt=""/>
+                        <div class="text_cont">
+                            <p class="pl_intro">歌单介绍♫</p>
+                            <p class="pl_amo">
+                                播放量
+                                <span>156.1</span>
+                                万
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="play_btn"><i></i></div>
+                    <a href="#" class="img_a">
+                        <img src="img/300.jpg" alt=""/>
+                        <div class="text_cont">
+                            <p class="pl_intro">歌单介绍♫</p>
+                            <p class="pl_amo">
+                                播放量
+                                <span>156.1</span>
+                                万
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<!--新歌首发-->
+<div class="arr">
+        <div class="recommend_bg">
+            <div class="recommend">
+                <div class="cover-text">
+                    <h2 class="title" id="d3">新歌首发</h2>  
+                </div>
+                <div class="second_nav">
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li><a href="#" class="text-muted">为你推荐</a></li>
+                        <li><a href="#" class="text-muted">90年代</a></li>
+                        <li><a href="#" class="text-muted">民谣</a></li>
+                        <li><a href="#" class="text-muted">日韩</a></li>
+                        <li><a href="#" class="text-muted">情歌</a></li>
+                        <li><a href="#" class="text-muted">网络歌曲</a></li>
+                    </ul>
+                </div>
+                <!--歌单推荐下面5张图-->
+                <div class="playlists">
+                    <ul class="wrapper list-unstyled d-flex justify-content-center flex-wrap">
+                        <li>
+                            <div class="play_btn"><i></i></div>
+                            <a href="#" class="img_a">
+                                <img src="img/304.jpg" alt=""/>
+                                <div class="text_cont">
+                                    <p class="pl_intro">歌单介绍♫</p>
+                                    <p class="pl_amo">
+                                        播放量
+                                        <span>156.1</span>
+                                        万
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="play_btn"><i></i></div>
+                            <a href="#" class="img_a">
+                                <img src="img/303.jpg" alt=""/>
+                                <div class="text_cont">
+                                    <p class="pl_intro">歌单介绍♫</p>
+                                    <p class="pl_amo">
+                                        播放量
+                                        <span>156.1</span>
+                                        万
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="play_btn"><i></i></div>
+                            <a href="#" class="img_a">
+                                <img src="img/302.jpg" alt=""/>
+                                <div class="text_cont">
+                                    <p class="pl_intro">歌单介绍♫</p>
+                                    <p class="pl_amo">
+                                        播放量
+                                        <span>156.1</span>
+                                        万
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="play_btn"><i></i></div>
+                            <a href="#" class="img_a">
+                                <img src="img/301.jpg" alt=""/>
+                                <div class="text_cont">
+                                    <p class="pl_intro">歌单介绍♫</p>
+                                    <p class="pl_amo">
+                                        播放量
+                                        <span>156.1</span>
+                                        万
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="play_btn"><i></i></div>
+                            <a href="#" class="img_a">
+                                <img src="img/300.jpg" alt=""/>
+                                <div class="text_cont">
+                                    <p class="pl_intro">歌单介绍♫</p>
+                                    <p class="pl_amo">
+                                        播放量
+                                        <span>156.1</span>
+                                        万
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    <div class="bang">
+        <div class="liuxing toplist">
+            <div class="cover-text">
+                <h2 class="h2" id="d4">排行榜</h2>  
+            </div>
+            <ul class="lists">
+                <li class="toplist_item">
+                    <div class="ban">
+                        <div class="item_left">
+                            <p class="toplist_title">云音乐飙升榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                        <div class="item_right">
+                            <p class="toplist_title">云音乐飙升榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                <li class="toplist_item">
+                    <div class="ban">
+                        <div class="item_left">
+                            <p class="toplist_title">云音乐新歌榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                        <div class="item_right">
+                            <p class="toplist_title">云音乐新歌榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+    
+                </li>
+                <li class="toplist_item">
+                    <div class="ban">
+                        <div class="item_left">
+                            <p class="toplist_title">网易原创音乐榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                        <div class="item_right">
+                            <p class="toplist_title">网易原创音乐榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+    
+                </li>
+                <li class="toplist_item">
+                    <div class="ban">
+                        <div class="item_left">
+                            <p class="toplist_title">云音乐英雄榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                        <div class="item_right">
+                            <p class="toplist_title">云音乐英雄榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+    
+                </li>
+                <li class="toplist_item">
+                    <div class="ban">
+                        <div class="item_left">
+                            <p class="toplist_title">巅峰挑战榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                        <div class="item_right">
+                            <p class="toplist_title">巅峰挑战榜</p>
+                            <p class="item_title">流行指数</p>
+                            <i class="item_line"></i>
+                            <ul class="item_songlist">
+                                <li>
+                                    <div class="s_num">1</div>
+                                    <div class="s_name">红蔷薇</div>
+                                    <div class="s_artist">张靓颖</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">2</div>
+                                    <div class="s_name">我们的时光</div>
+                                    <div class="s_artist">林俊杰</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">3</div>
+                                    <div class="s_name">刘海砍樵</div>
+                                    <div class="s_artist">张艺兴</div>
+                                </li>
+                                <li>
+                                    <div class="s_num">4</div>
+                                    <div class="s_name">都选C</div>
+                                    <div class="s_artist">缝纫机乐队</div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--mv视频-->
+    <div class="mv">
+        <div class="mv_box">
+            <div class="cover-text">
+                <h2 class="h2" id="d5">MV</h2>
+            </div>
+            <script src="js/animate.js"></script>
+            <div class="tj">
+                <ul class="d-flex justify-content-center">
+                    <li class="tj_li">推荐</li>
+                    <li class="tj_li">内地</li>
+                    <li class="tj_li">港台</li>
+                    <li class="tj_li">欧美</li>
+                    <li class="tj_li">日本</li>
+                    <li class="tj_li">韩国</li>
+                </ul>
+            </div>
+            <div class="tj_pic">
+                <ul class="d-flex justify-content-center pic_img">
+                    <li class="li_pic">
+                        <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                            <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>《烟花》电影同名主题曲</p>
+                        <p>DAOKA</p>
+                    </li>
+                    <li class="li_pic">
+                        <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                            <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>《烟花》电影同名主题曲</p>
+                        <p>DAOKA</p>
+                    </li>
+                    <li class="li_pic">
+                        <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                             <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>《烟花》电影同名主题曲</p>
+                        <p>DAOKA</p>
+                    </li>
+                    <li class="li_pic">
+                        <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                             <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>《烟花》电影同名主题曲</p>
+                        <p>DAOKA</p>
+                    </li>
+                </ul>
+                <ul class="d-flex justify-content-center pic_img">
+                    <li class="li_pic">
+                            <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                             <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>分裂时空</p>
+                        <p>鞠婧祎</p>
+                    </li>
+                    <li class="li_pic">
+                            <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                            <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>分裂时空</p>
+                        <p>鞠婧祎</p>
+                    </li>
+                    <li class="li_pic">
+                            <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                             <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>分裂时空</p>
+                        <p>鞠婧祎</p>
+                    </li>
+                    <li class="li_pic">
+                            <div id="play_btn"><i></i></div>
+                        <a href="javascript:;">
+                            <div class="mv_d2">
+                               <img id="d2" src="img/mv_1.png" alt=""/> 
+                            </div>
+                        </a>
+                        <p><i id="mv_icon"></i>分裂时空</p>
+                        <p>鞠婧祎</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="row footer">
+            <div class="p-left">
+                <p class="pyd">
+                    <a href="#">关于网易</a>
+                    <span class="text-muted">|</span>
+                    <a href="#">客户服务</a>
+                    <span class="text-muted">|</span>
+                    <a href="#">服务条款</a>
+                    <span class="text-muted">|</span>
+                    <a href="#">网站导航</a>
+                    <span class="text-muted">|</span>
+                    <a href="#">意见反馈</a>
+                </p>
+                <p class="text-muted pyd">
+                    <span>网易公司版权所有©1997-2018</span>
+                    杭州乐读科技有限公司运营：
+                    <a href="#">浙网文[2018]3506-263号</a>
+                </p>
+                <p class="text-muted pyd">
+                    <span>违法和不良信息举报电话：0571-89853516</span>
+                    举报邮箱：
+                    <a href="#">cloudmusicservice@163.com</a>
+                </p>
+            </div>
+            <div class="text-center u-right">
+                <ul class="list-unstyled d-flex ulyd">
+                    <li>
+                        <a href="javascript:;"><img src="img/duliyin.jpg" class="my_logo1 pb-1" alt=""/></a>
+                        <p><a href="javascript:;"></a>独立音乐人</a></p>
+                    </li>
+                    <li>
+                        <a href="recruit.html"><img src="img/yinyue.jpg" class="my_logo2" alt=""/></a>
+                        <p><a href="recruit.html">音乐专栏</a></p>
+                    </li>
+                    <li>
+                        <a href="selfmedia.html"><img src="img/zimeiti.jpg" class="my_logo3 pb-2" alt=""/></a>
+                        <p><a href="selfmedia.html">自媒体</a></p>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/zansgang.jpg" class="my_logo4 pb-2" alt=""/></a>
+                        <p><a href="javascript:;">赞赏</a></p>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/shiping.jpg" class="my_logo5" alt=""/></a>
+                        <p><a href="javascript:;">视频奖励</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</footer>
+<div class="playbar_box">
+	<div class="playbar_bg">
+		<div class="trigger_up"></div>
+		<div class="playbar">
+			<div class="pb_btns">
+				<a href="javascript:;">
+					<i class="pre_icon"></i>
+				</a>
+				<a href="javascript:;" data-action="pause">
+					<i class="pau_icon"></i>
+				</a>
+				<a href="javascript:;">
+					<i class="nxt_icon"></i>
+				</a>
+			</div>
+			<div class="pb_cover">
+				<img src="img/default_album.jpg" alt="cover">
+			</div>
+			<div class="pb_play">
+				<div class="mu_title">
+					<span class="mu_name">The Good Side</span>
+					<span class="musician">Troye Sivan</span>
+				</div>
+				<div class="pb_con">
+					<div class="pb_tbar">
+						<div class="pb_cbar"></div>
+					</div>
+					<div class="pb_dot"></div>
+					<div class="duration">
+						<span class="ctime">00:00</span>
+						<span> / </span>
+						<span class="ttime">00:00</span>
+					</div>
+				</div>
+			</div>
+			<div class="pb_ctrls">
+				<a href="javascript:;">
+					<i class="coll_icon"></i>
+				</a>
+				<a href="javascript:;">
+					<i class="share_icon"></i>
+				</a>
+				<a href="javascript:;">
+					<i class="vol_icon"></i>
+				</a>
+				<a href="javascript:;">
+					<i class="loop_icon"></i>
+				</a>
+				<a href="javascript:;">
+					<i class="plist_icon"></i>
+				</a>
+			</div>
+		</div>
+		<audio src="img/3331052726.mp3" id='aud'></audio>
+		<div class="pb_lock">
+			<a href="javascript:;">
+				<i class="unlock_icon"></i>
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

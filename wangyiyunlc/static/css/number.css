@@ -1,0 +1,7 @@
+/*新碟上架*/
+.newdie{background:#fff;}
+.n-rank_web{width:1100px;margin:0 auto;}
+.n-rank_web h2{margin:50px 0 20px;font-size:24px;line-height: 24px;font-weight: 700;}
+/*新碟上架之图片*/
+.n-rank_web .m-newlist{min-height:664px;margin-left:-49px;}
+.n-rank_web .m-newlist li{float:left;position: relative;width:238px;padding-left:49px;}
